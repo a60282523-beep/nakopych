@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Накопич 2027 — грошові челенджі та фінансовий планер</title>
+<meta name="description" content="Грошові челенджі та фінансовий планер на 2027 рік. 45 сторінок: збирай на мрію, подушку безпеки, дім, авто чи відпустку. Друкуй або заповнюй у телефоні.">
+<meta property="og:title" content="Накопич 2027 — грошові челенджі + фінансовий планер">
+<meta property="og:description" content="45 сторінок, щоб накопичити на мрію крок за кроком. Друкуй або заповнюй у телефоні.">
+<meta property="og:image" content="img/p1.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#F8F1E8;--card:#FFFBF5;--green:#86A06C;--green-d:#5F7A4A;--ink:#2F3A2B;--muted:#6F6A60;--accent:#C27C5C;--line:#E6DCCD}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:0 20px}
+  h1,h2,h3{font-family:Lora,Georgia,serif;font-weight:600;line-height:1.2}
+  header{padding:28px 0 8px;text-align:center}
+  .logo{font-family:Lora,serif;font-size:22px;color:var(--ink);letter-spacing:.5px}
+  .hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:28px 0 56px}
+  .hero h1{font-size:44px;margin-bottom:10px}
+  .hero .sub{color:var(--accent);font-size:18px;margin-bottom:18px}
+  .hero p{color:var(--muted);font-size:17px;margin-bottom:24px}
+  .hero img{width:100%;border-radius:14px;box-shadow:0 18px 40px rgba(60,50,30,.15)}
+  .btn{display:inline-block;background:var(--green-d);color:#fff;text-decoration:none;font-weight:600;font-size:18px;padding:16px 30px;border-radius:999px;transition:.2s}
+  .btn:hover{background:var(--ink)}
+  .note{font-size:14px;color:var(--muted);margin-top:12px}
+  section{padding:48px 0;border-top:1px solid var(--line)}
+  section h2{font-size:32px;text-align:center;margin-bottom:10px}
+  .lead{text-align:center;color:var(--muted);max-width:620px;margin:0 auto 32px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .card h3{font-size:20px;margin-bottom:6px}
+  .card p{color:var(--muted);font-size:15px}
+  .num{font-family:Lora,serif;font-size:34px;color:var(--green-d)}
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .gallery figure{background:var(--card);border-radius:10px;overflow:hidden;box-shadow:0 6px 18px rgba(60,50,30,.08)}
+  .gallery img{width:100%;display:block}
+  .gallery figcaption{font-size:13px;padding:8px 10px;color:var(--muted)}
+  .list{columns:2;column-gap:40px;max-width:760px;margin:0 auto}
+  .list li{break-inside:avoid;list-style:none;padding:8px 0 8px 30px;position:relative;border-bottom:1px dashed var(--line)}
+  .list li:before{content:"";position:absolute;left:4px;top:14px;width:14px;height:14px;border-radius:50%;background:var(--green)}
+  .steps{counter-reset:s;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .steps .card:before{counter-increment:s;content:counter(s);display:inline-flex;width:36px;height:36px;border-radius:50%;background:var(--green);color:#fff;align-items:center;justify-content:center;font-weight:600;margin-bottom:12px}
+  .cta{text-align:center;background:var(--card);border-radius:20px;padding:44px 24px;margin:48px 0}
+  .cta h2{margin-bottom:10px}
+  .cta p{color:var(--muted);margin-bottom:22px}
+  .faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:10px;max-width:760px;margin-left:auto;margin-right:auto}
+  .faq summary{font-weight:600;cursor:pointer}
+  .faq p{color:var(--muted);margin-top:8px}
+  footer{text-align:center;color:var(--muted);font-size:14px;padding:30px 0 90px}
+  .sticky{position:fixed;left:0;right:0;bottom:0;padding:12px 16px;background:rgba(248,241,232,.96);border-top:1px solid var(--line);text-align:center;display:none}
+  @media(max-width:760px){
+    .hero{grid-template-columns:1fr;text-align:center;gap:24px;padding-top:10px}
+    .hero h1{font-size:36px}
+    .grid3,.steps{grid-template-columns:1fr}
+    .gallery{grid-template-columns:repeat(2,1fr)}
+    .list{columns:1}
+    .sticky{display:block}
+  }
+
+  section{border-top:none;border-radius:24px;padding:48px 28px;margin:22px 0}
+  .s-green{background:#E4ECDA}.s-peach{background:#F6E4D4}.s-lilac{background:#ECE5F5}.s-blue{background:#E0EAF3}.s-pink{background:#F7E3E3}
+  .s-green h2{color:#4E6B3B}.s-peach h2{color:#9A5A3C}.s-lilac h2{color:#6A4E8F}.s-blue h2{color:#3F6585}.s-pink h2{color:#9B4B5A}
+  .c1{background:#F2F6EC;border-color:#CFDDBF}.c2{background:#FBF1E6;border-color:#EBD3BA}.c3{background:#F5F0FB;border-color:#DCD0EE}
+  .c1 .num{color:#5F7A4A}.c2 .num{color:#B5734F}.c3 .num{color:#7B5BA6}
+  .gallery figure:nth-child(4n+1) figcaption{background:#E4ECDA}.gallery figure:nth-child(4n+2) figcaption{background:#F6E4D4}
+  .gallery figure:nth-child(4n+3) figcaption{background:#ECE5F5}.gallery figure:nth-child(4n+4) figcaption{background:#E0EAF3}
+  .gallery figcaption{color:#3a3a34;font-weight:500}
+  .list li:nth-child(5n+1):before{background:#86A06C}.list li:nth-child(5n+2):before{background:#E0A07C}.list li:nth-child(5n+3):before{background:#A58BCB}
+  .list li:nth-child(5n+4):before{background:#7FA3C4}.list li:nth-child(5n+5):before{background:#E39AA6}
+  .steps .card:nth-child(1):before{background:#E0A07C}.steps .card:nth-child(2):before{background:#A58BCB}.steps .card:nth-child(3):before{background:#86A06C}
+  .cta{background:linear-gradient(135deg,#E4ECDA,#F6E4D4 50%,#ECE5F5)}
+  .hero{background:linear-gradient(160deg,#FFFBF5,#F3EADF);border-radius:24px;padding:36px 32px 44px;margin-top:6px}
+  @media(max-width:760px){section{padding:36px 18px;border-radius:18px}.hero{padding:24px 18px 32px}}
+  .price{font-family:Lora,serif;font-size:34px;color:#9A5A3C;margin-bottom:14px;font-weight:600}
+</style>
+</head>
+<body>
+<header><div class="logo">🌳 Накопич</div></header>
+
+<main class="wrap">
+  <div class="hero">
+    <div>
+      <h1>Накопич 2027</h1>
+      <div class="sub">грошові челенджі + фінансовий планер</div>
+      <p>Збирай на мрію граючись. Відклала гроші — зафарбувала клітинку. Без жорсткої економії та складних таблиць: ти просто бачиш, як твоє дерево, дім чи авто наповнюються з кожною гривнею.</p>
+      <div class="price">249 грн</div>
+      <a class="btn" href="https://ig.me/m/nakopych_challenge">Хочу «Накопич»</a>
+      <div class="note">Напиши «ХОЧУ» в Дірект — надішлемо реквізити</div>
+    </div>
+    <img src="img/p1.jpg" alt="Обкладинка планера Накопич 2027 з грошовим деревом">
+  </div>
+
+  <section class="s-green">
+    <h2>Що всередині</h2>
+    <p class="lead">Один файл PDF на 45 сторінок, формат А4.</p>
+    <div class="grid3">
+      <div class="card c1"><div class="num">10</div><h3>грошових челенджів</h3><p>Від 3 000 до 100 000 грн: дерево, подушка безпеки, дім, відпустка, авто, 100 конвертів, 52 тижні та інші.</p></div>
+      <div class="card c2"><div class="num">12</div><h3>місяців планера</h3><p>Бюджет на кожен місяць 2027 року та сторінка щоденних витрат, щоб бачити, куди йдуть гроші.</p></div>
+      <div class="card c3"><div class="num">45</div><h3>сторінок</h3><p>Плюс підписки та платежі, борги й розстрочки, правило 30 днів, підсумок року та наліпки.</p></div>
+    </div>
+  </section>
+
+  <section class="s-peach">
+    <h2>Подивись сторінки</h2>
+    <p class="lead">Кожна клітинка — конкретна сума. Зафарбовуєш і бачиш, скільки вже накопичила.</p>
+    <div class="gallery">
+      <figure><img src="img/p5.jpg" alt="Челендж Грошове дерево"><figcaption>Грошове дерево — 50 000 грн</figcaption></figure>
+      <figure><img src="img/p7.jpg" alt="Челендж Мій дім"><figcaption>Мій дім — 30 000 грн</figcaption></figure>
+      <figure><img src="img/p9.jpg" alt="Челендж Авто"><figcaption>Авто — 100 000 грн</figcaption></figure>
+      <figure><img src="img/p6.jpg" alt="Челендж Подушка безпеки"><figcaption>Подушка безпеки — 30 000 грн</figcaption></figure>
+      <figure><img src="img/p11.jpg" alt="Челендж 100 конвертів"><figcaption>100 конвертів — 5 050 грн</figcaption></figure>
+      <figure><img src="img/p12.jpg" alt="Челендж 52 тижні"><figcaption>52 тижні — 27 560 грн</figcaption></figure>
+      <figure><img src="img/p18.jpg" alt="Бюджет на місяць"><figcaption>Бюджет на кожен місяць</figcaption></figure>
+      <figure><img src="img/p16.jpg" alt="Наліпки"><figcaption>Наліпки для мотивації</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="s-lilac">
+    <h2>Усі челенджі</h2>
+    <p class="lead">Обирай один або кілька — під свою мрію.</p>
+    <ul class="list">
+      <li>Грошове дерево — 50 000 грн</li>
+      <li>Подушка безпеки — 30 000 грн</li>
+      <li>Мій дім — 30 000 грн</li>
+      <li>Відпустка — 20 000 грн</li>
+      <li>Авто — 100 000 грн</li>
+      <li>Новий рік і подарунки — 5 000 грн</li>
+      <li>100 конвертів — 5 050 грн</li>
+      <li>52 тижні — 27 560 грн</li>
+      <li>Кинь палити — 3 000 грн</li>
+      <li>Мій власний челендж — на будь-яку суму</li>
+    </ul>
+  </section>
+
+  <section class="s-blue">
+    <h2>Як купити</h2>
+    <p class="lead">Без реєстрацій і кошиків — просто напиши нам.</p>
+    <div class="steps">
+      <div class="card"><h3>Напиши «ХОЧУ»</h3><p>У Дірект Instagram <b>@nakopych_challenge</b>.</p></div>
+      <div class="card"><h3>Оплати на картку</h3><p>249 грн. Реквізити надішлемо у відповідь.</p></div>
+      <div class="card"><h3>Отримай файл</h3><p>Після оплати надсилаємо PDF у Дірект. Друкуй або заповнюй у телефоні.</p></div>
+    </div>
+  </section>
+
+  <section class="s-pink faq">
+    <h2>Питання</h2>
+    <p class="lead"></p>
+    <details><summary>Як заповнювати в телефоні?</summary><p>Відкрий PDF у застосунку з пером: Samsung Notes, Xodo (безкоштовно, Android та iPhone), GoodNotes або Notability на iPad. Зафарбовуй клітинки пальцем чи стилусом.</p></details>
+    <details><summary>Можна роздрукувати?</summary><p>Так. Формат А4 — друкуй удома або в копіцентрі лише потрібні сторінки.</p></details>
+    <details><summary>Це паперовий планер?</summary><p>Ні, це електронний файл PDF. Ніякої доставки чекати не треба.</p></details>
+    <details><summary>А якщо пропущу тиждень?</summary><p>Нічого страшного — просто продовжуй. Челендж — не іспит, а гра.</p></details>
+  </section>
+
+  <div class="cta">
+    <h2>Твоя мрія росте з кожною гривнею</h2>
+    <p>Почни 2027 рік із планом, а не з порожньою карткою.</p>
+    <div class="price">249 грн</div>
+    <a class="btn" href="https://ig.me/m/nakopych_challenge">Написати «ХОЧУ» в Дірект</a>
+  </div>
+</main>
+
+<footer>© 2027 Накопич · <a href="https://www.instagram.com/nakopych_challenge/" style="color:inherit">Instagram @nakopych_challenge</a><br>Файл для особистого використання.</footer>
+<div class="sticky"><a class="btn" style="width:100%" href="https://ig.me/m/nakopych_challenge">Хочу «Накопич» · 249 грн</a></div>
+</body>
+</html>
