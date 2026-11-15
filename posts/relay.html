@@ -1,0 +1,6 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="robots" content="noindex"></head><body>
+<script>
+(async()=>{const q=new URLSearchParams(location.search);const files=(q.get('f')||'').split(',').filter(Boolean);
+const bufs=await Promise.all(files.map(f=>fetch(f).then(r=>r.arrayBuffer())));
+if(window.opener){window.opener.postMessage({nak:true,files,bufs},'https://www.instagram.com');document.body.textContent='ok';setTimeout(()=>window.close(),500)}else{document.body.textContent='no opener'}})();
+</script></body></html>
